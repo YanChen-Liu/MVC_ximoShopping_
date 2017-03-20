@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -169,13 +171,128 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LifeThinkTanksController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Activity.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityDetail.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brand.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BrandActivity.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\class.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DeliveryInformation.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DMsmallActivity.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GoodsNotice.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Life.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Life.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Life.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Life.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Life.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LifeClass.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LifeKowledge.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LotteryList.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManageMenu.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManageRole.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManageSubMenu.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MemberInfo.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetail.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderReplace.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PayType.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProCapacity.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProPayType.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProState.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RoleType.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Series.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShopClass.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vendor.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VendorBrandList.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VendorManage.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Video.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WeekGift.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WinPrize.cs">
+      <DependentUpon>Life.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -186,8 +303,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Life.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Life.edmx</DependentUpon>
+      <LastGenOutput>Life.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Life.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Life.edmx</DependentUpon>
+      <LastGenOutput>Life.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Life.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Life.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Life.edmx.diagram">
+      <DependentUpon>Life.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -200,7 +334,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -237,6 +373,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\LifeThinkTanks\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -245,6 +382,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
